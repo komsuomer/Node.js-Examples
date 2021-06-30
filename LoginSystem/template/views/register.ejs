@@ -1,0 +1,19 @@
+<%- include('header.ejs') %>
+
+<div>
+    <form id="form">
+        <label for="userName">User Name : </label>
+        <input type="text" name="userName" id="userName" required><br>
+        <label for="email">E-mail : </label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="password">Password : </label>
+        <input type="password" name="password" id="password" required><br>
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+
+<script src="/js/register.js"></script>
+
+
+<%- include('footer.ejs') %>

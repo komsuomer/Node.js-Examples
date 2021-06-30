@@ -1,0 +1,26 @@
+id=picker set date
+id=curr_table get table
+
+\l	list databases
+\dt	list tables
+\du	list users
+
+create table dummy_table(name varchar(20),address text,age int);
+insert into dummy_table values('XYZ','location-A',25);
+
+select * from dummy_table;
+select * from dummy_table where age <=50; less than or equal
+select name from dummy_table where age<>50; not equal
+
+update dummy_table set age=50 where name='PQR';
+update dummy_table set name='GHI',age=54 where address='location-D';
+
+delete from dummy_table where age=65;
+
+drop table if exists dummy;
+
+Create table with select
+select 'My name  is X' as col1 , 10 as col2, 'Address is -XYZ location' as col3  into new_table;
+
+select length(name),length(age) from dummy_table;
+

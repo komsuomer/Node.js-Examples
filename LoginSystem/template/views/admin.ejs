@@ -1,0 +1,22 @@
+<%- include('header.ejs') %>
+
+<p>Welcome to Admin Page</p>
+
+<ul>
+    <% userList.forEach(function(user) { %>
+        <li>
+            <strong>User Name : </strong><%= user.userName %> <br>
+            <strong>E-mail : </strong><%= user.email %> <br>
+            <strong>Age : </strong><%= user.age %> <br>
+            <input type="button" value="Delete" id=<%= user.email %> onclick="del(this)">
+        </li>
+    <% }); %>
+</ul>
+
+<a href="/admin">Logout</a>
+<!-- <script>
+    history.replaceState('', "", "admin");  veriyi parametrelere gore cektir
+</script> -->
+<script src="/js/admin.js"></script>
+
+<%- include('footer.ejs') %>

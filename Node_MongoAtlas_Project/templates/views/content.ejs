@@ -1,0 +1,47 @@
+<form action="/getRange" method="GET">
+  <div>
+    <label for="party">Choose date range:
+      <input type="date" name="dateStart" min="1971-04-01" max="2021-03-11" value="2021-03-11" onchange="updateDateStart(event)">
+      <p style="display: inline;">-</p>
+      <input type="date" name="dateEnd" min="2021-03-11" max="2021-03-18" value="2021-03-18" onchange="updateDateEnd(event)">
+    </label>
+  </div>
+  <div >
+    <input type="checkbox" id="currency1" name="currency" value="USDX">
+    <label for="currency1"> USD Index</label><br>
+    <input type="checkbox" id="currency2" name="currency" value="EUR_USD">
+    <label for="currency2"> Euro / USD</label><br>
+    <input type="checkbox" id="currency3" name="currency" value="TRY_USD">
+    <label for="currency3"> Turkish Lira / USD</label><br>
+    <input type="checkbox" id="currency4" name="currency" value="BTC_USD">
+    <label for="currency4"> Bitcoin / USD</label>
+  </div>
+  <button type="submit" class="btn">Send Request</button>
+</form>
+
+<!-- 
+<div class="login-form">
+    <form action="/login" method="POST">
+      <div class="form-control">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          name="name"
+          id="username"
+          placeholder="Enter your name"
+        />
+      </div>
+      <div class="form-control">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Enter your password"
+        />
+      </div>
+      <div class="form-control">
+        <button type="submit" class="btn">Login</button>
+      </div>
+    </form>
+  </div> -->

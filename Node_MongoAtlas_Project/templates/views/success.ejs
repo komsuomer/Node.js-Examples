@@ -1,0 +1,9 @@
+<%- include('header.ejs') %>
+<div id="chartContainer" style="height: 90vh; width: 100%;" data-data-list = <%-JSON.stringify(currencyList)%> data-name-list = <%-JSON.stringify(nameList)%> ></div>
+
+<a href="/" class="link">Go Back</a>
+<p>Welcome , You are logged in.</p>
+<p id="test"></p>
+
+<script src="/js/chart.js"></script>
+<%- include('footer.ejs') %>

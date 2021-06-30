@@ -1,0 +1,17 @@
+<%- include('header.ejs') %>
+
+<div>
+    <form action="/login" method="post">
+        <label for="email">E-mail : </label>
+        <input type="email" name="email" id="email" required><br>
+        <label for="password">Password : </label>
+        <input type="password" name="password" id="password"required><br>
+        <input type="submit" value="Login">
+        <a href="/register">Register</a>
+    </form>
+</div>
+
+<script>
+    history.replaceState('', "", "login");
+</script>
+<%- include('footer.ejs') %>
