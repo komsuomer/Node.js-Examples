@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Draw Challenge</title>
+    <script src="socket.io/socket.io.js"></script>
+    <script defer src='script.js'></script>
+
+    <style>
+        .input_video {
+            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+            /* Safari and Chrome */
+            -moz-transform: rotateY(180deg);
+            /* Firefox */
+        }
+
+        .output_canvas {
+            border-style: solid;
+            border-width: medium;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello User</h1>
+
+    <div class='login'>
+        <input type="text" name="username" id="username">
+        <input type="text" name="roomname" id="roomname">
+        <input type="button" value="Enter Room" onclick="sendUserName()">
+    </div>
+
+    <div class='gameDiv' hidden>
+        <p>Game Screen</p>
+        <canvas id='client_canvas' class='output_canvas' width="640px" height="360px" ></canvas>
+        <input type="text" name="Write Your Answer" id="answer">
+        <input type="button" id='sendAnswerBtn' value="Send Your Answer" onclick="sendAnswer()" disabled>
+    </div>
+
+    <div class='hostDiv' hidden>
+        <p>Host Div</p>
+        <input type="button" value="start" onclick="startGame(event)">
+        <div class="container" hidden>
+            <canvas id='host_canvas' class="output_canvas" width="640px" height="360px"></canvas>
+            <video class="input_video" style="width: 640px; height: 360px; "></video>
+        </div>
+    </div>
+</body>
+
+</html>
